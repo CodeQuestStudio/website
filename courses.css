@@ -1,0 +1,702 @@
+/*=========================================
+COURSES PAGE CSS - PART 1
+Banner + Navbar + Section Title
+=========================================*/
+
+.courses-page{
+    background:#f6f8ff;
+    font-family:'Poppins',sans-serif;
+}
+
+/*==============================
+NAVBAR
+==============================*/
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+}
+
+/* Full width navbar attached to banner */
+
+.courses-page .navbar{
+    width:100%;
+    margin:0;
+    height:82px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    background:rgba(26,20,68,.88);
+    backdrop-filter:blur(15px);
+
+    border-radius:0;
+    border:none;
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+/*==============================
+LOGO
+==============================*/
+
+.courses-page .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.courses-page .logo img{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#fff;
+    padding:4px;
+    object-fit:cover;
+}
+
+.courses-page .logo-text h2{
+    color:#fff;
+    font-size:26px;
+    font-weight:700;
+    margin:0;
+}
+
+.courses-page .logo-text span{
+    color:#ff9800;
+}
+
+.courses-page .logo-text p{
+    color:#ddd;
+    font-size:12px;
+    margin:0;
+}
+
+/*==============================
+NAV LINKS
+==============================*/
+
+.courses-page .nav-links{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:35px;
+    margin:0;
+    padding:0;
+}
+
+.courses-page .nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    font-size:16px;
+    position:relative;
+    transition:.3s;
+}
+
+.courses-page .nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:3px;
+
+    background:#ff9800;
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.courses-page .nav-links a:hover{
+    color:#ff9800;
+}
+
+.courses-page .nav-links a:hover::after,
+.courses-page .nav-links .active::after{
+    width:100%;
+}
+
+.courses-page .nav-links .active{
+    color:#ff9800;
+}
+
+/*==============================
+NAV BUTTONS
+==============================*/
+
+.courses-page .nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.demo-btn,
+.enroll-btn{
+    text-decoration:none;
+    padding:11px 22px;
+    border-radius:30px;
+    color:#fff;
+    font-weight:600;
+    transition:.4s;
+    white-space:nowrap;
+}
+
+.demo-btn{
+    background:#5b2cff;
+}
+
+.enroll-btn{
+    background:linear-gradient(45deg,#ff9800,#ff5e00);
+}
+
+.demo-btn:hover,
+.enroll-btn:hover{
+    transform:translateY(-3px);
+}
+
+/*==============================
+BANNER
+==============================*/
+
+.course-banner{
+    width:100%;
+    margin:0;
+    padding:0;
+    position:relative;
+}
+
+.course-banner img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:cover;
+}
+
+/*
+   Banner goes behind the sticky navbar.
+   No left/right space.
+*/
+
+/*==============================
+COURSES SECTION
+==============================*/
+
+.courses-section{
+    padding:90px 8%;
+    background:#f6f8ff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:#5b2cff;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:44px;
+    color:#222;
+    margin:15px 0;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:30px;
+    font-size:17px;
+}
+
+/*=========================================
+COURSES PAGE CSS - PART 2
+Course Cards
+=========================================*/
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/*==============================
+COURSE CARD
+==============================*/
+
+.course-card{
+    background:#fff;
+    border-radius:22px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(91,44,255,.08);
+}
+
+.course-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#5b2cff,#ff9800);
+}
+
+.course-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 45px rgba(91,44,255,.18);
+}
+
+/*==============================
+ICON
+==============================*/
+
+.course-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:22px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:38px;
+    transition:.4s;
+}
+
+.course-card:hover .course-icon{
+    transform:rotate(10deg) scale(1.1);
+}
+
+/* Icon Colors */
+
+.purple{
+    background:linear-gradient(135deg,#5b2cff,#7b5cff);
+}
+
+.orange{
+    background:linear-gradient(135deg,#ff9800,#ff6d00);
+}
+
+.blue{
+    background:linear-gradient(135deg,#2196f3,#00bcd4);
+}
+
+.green{
+    background:linear-gradient(135deg,#00c853,#43a047);
+}
+
+.pink{
+    background:linear-gradient(135deg,#ff4081,#ec407a);
+}
+
+.gold{
+    background:linear-gradient(135deg,#f9a825,#ffd54f);
+}
+
+/*==============================
+TEXT
+==============================*/
+
+.course-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.course-card p{
+    color:#666;
+    line-height:28px;
+    font-size:15px;
+    margin-bottom:22px;
+}
+
+/*==============================
+BOTTOM
+==============================*/
+
+.course-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.course-bottom span{
+    color:#777;
+    font-size:14px;
+}
+
+.course-bottom a{
+    text-decoration:none;
+    background:#5b2cff;
+    color:#fff;
+    padding:9px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.course-bottom a:hover{
+    background:#ff9800;
+}
+
+/*==============================
+HOVER EFFECT
+==============================*/
+
+.course-card:hover h3{
+    color:#5b2cff;
+}
+
+.course-card:hover p{
+    color:#444;
+}
+
+.course-card:hover .course-bottom span{
+    color:#5b2cff;
+}
+
+/*=========================================
+COURSES PAGE CSS - PART 3
+Why Choose Us + CTA + Footer + Responsive
+=========================================*/
+
+/*==============================
+WHY CHOOSE US
+==============================*/
+
+.why-courses{
+    padding:90px 8%;
+    background:linear-gradient(135deg,#eef3ff,#ffffff,#f7f9ff);
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.why-box{
+    background:#fff;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    border:1px solid rgba(91,44,255,.08);
+}
+
+.why-box:hover{
+    transform:translateY(-10px);
+    background:linear-gradient(135deg,#5b2cff,#7b5cff);
+}
+
+.why-box i{
+    font-size:42px;
+    color:#ff9800;
+    margin-bottom:18px;
+    transition:.4s;
+}
+
+.why-box:hover i{
+    color:#fff;
+    transform:scale(1.15);
+}
+
+.why-box h3{
+    font-size:22px;
+    color:#222;
+    margin-bottom:12px;
+}
+
+.why-box:hover h3{
+    color:#fff;
+}
+
+.why-box p{
+    color:#666;
+    line-height:28px;
+    font-size:15px;
+}
+
+.why-box:hover p{
+    color:#f5f5f5;
+}
+
+/*==============================
+CALL TO ACTION
+==============================*/
+
+.course-cta{
+    padding:90px 8%;
+    text-align:center;
+    background:linear-gradient(135deg,#5b2cff,#7b5cff);
+    color:#fff;
+}
+
+.course-cta h2{
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.course-cta p{
+    max-width:700px;
+    margin:auto;
+    line-height:30px;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.cta-btn{
+    display:inline-block;
+    padding:16px 38px;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.4s;
+}
+
+.cta-btn:hover{
+    background:#fff;
+    color:#5b2cff;
+    transform:translateY(-5px);
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+.footer{
+    background:#14094b;
+    color:#fff;
+    text-align:center;
+    padding:60px 8% 25px;
+}
+
+.footer-logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#fff;
+    padding:5px;
+    margin-bottom:15px;
+}
+
+.footer-logo h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.footer-logo p{
+    color:#ddd;
+    margin-bottom:25px;
+}
+
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.footer-social a{
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    font-size:20px;
+    transition:.4s;
+    text-decoration:none;
+}
+
+.footer-social a:hover{
+    background:#ff9800;
+    transform:translateY(-6px);
+}
+
+.copyright{
+    margin-top:20px;
+    color:#ccc;
+    font-size:15px;
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:1200px){
+
+    .courses-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .courses-page .navbar{
+        padding:0 25px;
+    }
+
+    .courses-page .nav-links{
+        gap:22px;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .courses-page .navbar{
+        height:auto;
+        min-height:75px;
+        padding:12px 20px;
+    }
+
+    .courses-page .nav-links{
+        gap:18px;
+    }
+
+    .courses-page .nav-buttons{
+        gap:8px;
+    }
+
+    .demo-btn,
+    .enroll-btn{
+        padding:10px 15px;
+        font-size:13px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .courses-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .course-cta h2{
+        font-size:34px;
+    }
+
+    /*
+       Mobile navbar remains at the top
+       but allows wrapping.
+    */
+
+    .courses-page .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        padding:12px 15px;
+    }
+
+    .courses-page .logo{
+        width:100%;
+        justify-content:center;
+    }
+
+    .courses-page .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin:5px 0;
+    }
+
+    .courses-page .nav-buttons{
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .courses-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .course-card{
+        padding:25px 20px;
+    }
+
+    .course-cta{
+        padding:70px 20px;
+    }
+
+    .course-cta h2{
+        font-size:28px;
+    }
+
+    .cta-btn{
+        width:100%;
+        display:block;
+    }
+
+    .footer-logo h2{
+        font-size:24px;
+    }
+
+    .courses-page .navbar{
+        padding:10px;
+    }
+
+    .courses-page .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    .courses-page .logo-text h2{
+        font-size:21px;
+    }
+
+    .courses-page .nav-links{
+        gap:12px;
+    }
+
+    .courses-page .nav-links a{
+        font-size:13px;
+    }
+
+    .demo-btn,
+    .enroll-btn{
+        padding:8px 12px;
+        font-size:12px;
+    }
+
+}
